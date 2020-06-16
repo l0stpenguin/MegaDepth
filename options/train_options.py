@@ -20,6 +20,6 @@ class TrainOptions(BaseOptions):
         self.parser.add_argument('--pool_size', type=int, default=50, help='the size of image buffer that stores previously generated images')
         self.parser.add_argument('--no_html', action='store_true', help='do not save intermediate training results to [opt.checkpoints_dir]/[opt.name]/web/')
         self.parser.add_argument('--no_flip'  , action='store_true', help='if specified, do not flip the images for data argumentation')
-
+        self.parser.add_argument('--sequence_number', type=str, default='0001')
         # NOT-IMPLEMENTED self.parser.add_argument('--preprocessing', type=str, default='resize_and_crop', help='resizing/cropping strategy')
         self.isTrain = True
